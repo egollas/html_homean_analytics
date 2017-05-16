@@ -1,0 +1,290 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+      <link rel="stylesheet" type="text/css" href="css/master.css">
+      <meta charset="utf-8">
+      <title>Analytics</title>
+        <!-- import plugin script -->
+        <script src='https://cdnjs.cloudflare.com/ajax/libs/Chart.js/1.0.2/Chart.min.js'></script>
+        <link href="https://fonts.googleapis.com/css?family=Merriweather+Sans" rel="stylesheet">
+        <script src="http://charts.livegap.com/js/webfont.js"></script>
+        <script src="https://use.fontawesome.com/08e4dbd107.js"></script>
+        <link href="https://opensource.keycdn.com/fontawesome/4.7.0/font-awesome.min.css" rel="stylesheet">
+    </head>
+    <body>
+  <div class="doted">
+  <div class="grid">
+    <div class="col fluid-flex">
+
+      <header>
+      <select id="soflow" class="dropdown">
+        <!-- This method is nice because it doesn't require extra div tags, but it also doesn't retain the style across all browsers. -->
+        <option>Select an Optionss</option>
+        <option>Option 1</option>
+        <option>Option 2</option>
+      </select>
+
+    </header>
+
+        <h1>Analytics</h1>
+        <div class="float_rigth btn-correction" >
+       <a class="btn" href="">Return to Chanel</a>
+      </div>
+        <div style="overflow: hidden;" class="top">
+            <!-- line chart canvas element -->
+            <canvas style=" position: absolute; top: 0px;left: 33px;" id="buyers" width="1125" height="322"></canvas>
+        </div>
+
+      </div>
+    </div>
+
+      <div class="maincontent">
+      <div class="font_google">Overview</div>
+          <div class="section group">
+            <div class="col span_1_of_5">
+            <span class="line">Total Viewers Minutes </span><br />
+            <span class="bold">4,428</span><i style="color:green;font-size: 28px;" class="fa fa-arrow-up"></i> <span class="small_bold">25%</span>
+            </div>
+            <div class="col span_1_of_5">
+      <span class="line">Total Streams</span> <br />
+            <span class="bold">1,215</span><i style="color:green;font-size: 28px;" class="fa fa-arrow-up"></i><span class="small_bold">5%</span>
+            </div>
+            <div class="col span_1_of_5">
+      <span class="line">Average Time Per Viewer</span><br />
+            <span class="bold">00:00:54</span><i style="color:red;font-size: 28px;" class="fa fa-arrow-down"></i><span class="small_bold">5%</span>
+            </div>
+            <div class="col span_1_of_5">
+      <span class="line">Total Unique Viewrs</span><br />
+            <span class="bold">655</span><i style="color:red;font-size: 28px;" class="fa fa-arrow-down"></i> <span class="small_bold">1%</span>
+            </div>
+            <div class="col span_1_of_5">
+      <span class="line">% New Visitors</span><br />
+            <span class="bold">54</span><i style="color:green;font-size: 28px;" class="fa fa-arrow-up"></i><span class="small_bold">2%</span>
+            </div>
+          </div>
+        </div>
+
+        <div class="maincontent main_two">
+          <div class="font_google"> Geolocation</div>
+          <div class="section group">
+            <div class="col span_1_of_2 padding_none  ">
+              <div class="pie_pading">
+              <canvas id="countries" width="325" height="325"></canvas>
+</div>
+            </div>
+            <div class="col span_1_of_2 padding_none">
+              <table class="demo">
+
+                <thead>
+                <tr>
+                  <th class="video_title">Country Terytory</th>
+                  <th class="video_title">Stream</th>
+                </tr>
+                </thead>
+                <tbody>
+                <tr>
+                  <td style="width: 370px;"><span id="square"></span> <span class="font_raw1">United States</span> <span class="font_raw">52%</span></td>
+                  <td><span class="font_raw1">350</span></td>
+                </tr>
+                <tr>
+                  <td><span id="square11"></span> <span class="font_raw1">Indonesia</span><span class="font_raw">12%</span></td>
+                  <td><span class="font_raw1">32</span></td>
+                </tr>
+                <tr>
+                  <td><span id="square1"></span> <span class="font_raw1">India</span><span class="font_raw">23%</span></td>
+                  <td><span class="font_raw1">12</span></td>
+                </tr>
+                <tr>
+                  <td><span id="square2"></span> <span class="font_raw1">United kindom</span> <span class="font_raw">12%</span></td>
+                  <td><span class="font_raw1">22</span></td>
+                </tr>
+                <tr>
+                  <td><span id="square3"></span> <span class="font_raw1">Mexico</span> <span class="font_raw">22%</span></td>
+                  <td><span class="font_raw1">44</span></td>
+                </tr>
+                <tr>
+                  <td><span id="square4"></span> <span class="font_raw1">Spain </span><span class="font_raw">11%</span></td>
+                  <td><span class="font_raw1">22</span></td>
+                </tr>
+                <tr>
+                  <td><span id="square5"></span> <span class="font_raw1">Turkey</span> <span class="font_raw">71%</span></td>
+                  <td><span class="font_raw1">66</span></td>
+                </tr>
+                <tbody>
+              </table>
+
+            </div>
+
+          </div>
+
+      </div>
+
+
+
+      <!-- next raw -->
+
+      <div class="maincontent main_three">
+      <div class="subtitles"> <span class="font_google">Video Views</span> <span class="float_rigth"><span class="link">View Full Report</span></span></div><div class="subtitles float_rigth header_r"> <span class="font_google">Video Views</span> <span class="float_rigth"><span class="link">View Full Report</span></span></div>
+      <div class="section group">
+
+      <div class="col span_1_of_2 padding_none">
+        <table class="demo">
+          <!-- <caption>Table 1</caption> -->
+          <thead>
+          <tr>
+            <th class="video_title">Video Title</th>
+            <th class="video_title">Post Title</th>
+          </tr>
+          </thead>
+          <tbody>
+          <tr>
+            <td style="width: 385px;"><span class="font_raw1">Music Showreel</span></td>
+            <td><span class="font_raw1">44</span></td>
+          </tr>
+          <tr>
+            <td><span class="font_raw1">Live Stream Music Showreel</span></td>
+            <td><span class="font_raw1">64</span></td>
+          </tr>
+          <tr>
+            <td><span class="font_raw1">Live Stream - FaceBook Promo</span></td>
+            <td><span class="font_raw1">123</span></td>
+          </tr>
+          <tr>
+            <td><span class="font_raw1">FaceBook Promo</span></td>
+            <td><span class="font_raw1">58</span></td>
+          </tr>
+          <tr>
+            <td><span class="font_raw1">Live Stram Showreel</span></td>
+            <td><span class="font_raw1">56</span></td>
+          </tr>
+          <tr>
+            <td><span class="font_raw1">Showreel</span></td>
+            <td><span class="font_raw1">234</span></td>
+          </tr>
+          <tr>
+            <td><span class="font_raw1">FaceBook Showree  l</span></td>
+            <td><span class="font_raw1">123</span></td>
+          </tr>
+          <tbody>
+        </table>
+      </div>
+      <div class="col span_1_of_2 padding_none">
+
+        <table class="demo">
+          <!-- <caption>Table 1</caption> -->
+          <thead>
+          <tr>
+            <th class="video_title">Post Title</th>
+            <th class="video_title">Views</th>
+          </tr>
+          </thead>
+          <tbody>
+            <tr>
+              <td style="width: 385px;"><span class="font_raw1">Music Showreel</span></td>
+              <td><span class="font_raw1">44</span></td>
+            </tr>
+            <tr>
+              <td><span class="font_raw1">Live Stream Music Showreel</span></td>
+              <td><span class="font_raw1">64</span></td>
+            </tr>
+            <tr>
+              <td><span class="font_raw1">Live Stream - FaceBook Promo</span></td>
+              <td><span class="font_raw1">123</span></td>
+            </tr>
+            <tr>
+              <td><span class="font_raw1">FaceBook Promo</span></td>
+              <td><span class="font_raw1">58</span></td>
+            </tr>
+            <tr>
+              <td><span class="font_raw1">Live Stram Showreel</span></td>
+              <td><span class="font_raw1">56</span></td>
+            </tr>
+            <tr>
+              <td><span class="font_raw1">Showreel</span></td>
+              <td><span class="font_raw1">234</span></td>
+            </tr>
+            <tr>
+              <td><span class="font_raw1">FaceBook Showree  l</span></td>
+              <td><span class="font_raw1">123</span></td>
+            </tr>
+          <tbody>
+        </table>
+
+      </div>
+
+      </div>
+
+      </div>
+
+      </div>
+
+
+        <script>
+            // line chart data
+            var buyerData = {
+                labels : ["January","February","March","April","May","June"],
+                datasets : [
+                {
+                    fillColor : "rgba(172,194,132,0.4)",
+                    strokeColor : "#ACC26D",
+                    pointColor : "#fff",
+                    pointStrokeColor : "#9DB86D",
+                    data : [203,156,99,251,305,247]
+                }
+            ]
+            }
+            // get line chart canvas
+            var buyers = document.getElementById('buyers').getContext('2d');
+            // draw line chart
+            new Chart(buyers).Line(buyerData);
+            // pie chart data
+            var pieData = [
+                {
+                    value: 20,
+                    color:"#878BB6"
+                },
+                {
+                    value : 40,
+                    color : "#4ACAB4"
+                },
+                {
+                    value : 10,
+                    color : "#FF8153"
+                },
+                {
+                    value : 30,
+                    color : "#FFEA88"
+                }
+            ];
+            // pie chart options
+            var pieOptions = {
+                 segmentShowStroke : false,
+                 animateScale : true
+            }
+            // get pie chart canvas
+            var countries= document.getElementById("countries").getContext("2d");
+            // draw pie chart
+            new Chart(countries).Pie(pieData, pieOptions);
+            // bar chart data
+            var barData = {
+                labels : ["January","February","March","April","May","June"],
+                datasets : [
+                    {
+                        fillColor : "#48A497",
+                        strokeColor : "#48A4D1",
+                        data : [456,479,324,569,702,600]
+                    },
+                    {
+                        fillColor : "rgba(73,188,170,0.4)",
+                        strokeColor : "rgba(72,174,209,0.4)",
+                        data : [364,504,605,400,345,320]
+                    }
+                ]
+            }
+            // get bar chart canvas
+            var income = document.getElementById("income").getContext("2d");
+            // draw bar chart
+            new Chart(income).Bar(barData);
+        </script>
+    </body>
+</html>
